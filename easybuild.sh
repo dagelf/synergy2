@@ -67,6 +67,7 @@ echo Done!
 echo src/target/*/bin
 ls -l src/target/*/bin/
 
+echo Making the container interactive...
 cp src/inside-docker.sh src/build.sh
 echo /bin/bash > src/inside-docker.sh
 echo To inspect: $D
