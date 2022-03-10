@@ -15,7 +15,7 @@ D="sudo docker"; docker ps -aq 2>/dev/null && D="docker"
 A="build-essential cmake libcurl4-gnutls-dev libxi-dev libxkbcommon-x11-dev libxtst-dev libxrandr-dev libxinerama-dev unzip" 
 # libssl-dev # needs some code changes
 
-CPUS=`grep -c ^processor /proc/cpuinfo`; [ $CPUS -gt 1 ] && M=-j$CPUS
+CPUS=`grep -c ^processor /proc/cpuinfo`; [ $CPUS -gt 1 ] && M=-j$CPUS  #fixme remove and rethink this if building for dockerhub or another registry
 
 # this just either apt gets everything in one line, or in separate lines (for quicker package-finding by utilizing docker caches)
 G="apt-get install -y"; L="   "; E="\ "; H=" && $G \\"
