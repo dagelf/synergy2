@@ -45,7 +45,7 @@ I=easybuild$Y
 
 echo Building image... # you can change the dockerfile here ---------------------- static part
 tee Dockerfile <<END
-FROM ubuntu
+FROM ubuntu:18.04
 RUN apt-get update $H $CC
 CMD /usr/src/inside-docker.sh
 
