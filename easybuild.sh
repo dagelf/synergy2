@@ -85,4 +85,5 @@ cp src/inside-docker.sh src/build.sh
 echo /bin/bash > src/inside-docker.sh
 echo To inspect: $D
 echo To clean up: docker rmi $I
-
+echo $D > ./inspect.sh && chmod +x ./inspect.sh
+echo docker rmi $I > ./clean.sh && chmod +x ./clean.sh
